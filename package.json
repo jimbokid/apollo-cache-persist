@@ -1,6 +1,6 @@
 {
-  "name": "apollo3-cache-persist",
-  "version": "0.15.0",
+  "name": "apollo3-cache-persist-fix-storage",
+  "version": "0.16.0",
   "description": "Simple persistence for all Apollo cache implementations",
   "author": "James Reggio <james.reggio@gmail.com>",
   "contributors": [
@@ -17,7 +17,9 @@
     "url": "git+https://github.com/apollographql/apollo-cache-persist.git"
   },
   "homepage": "https://github.com/apollographql/apollo-cache-persist#readme",
-  "bugs": "https://github.com/apollographql/apollo-cache-persist/issues",
+  "bugs": {
+    "url": "https://github.com/apollographql/apollo-cache-persist/issues"
+  },
   "scripts": {
     "version": "yarn run changelog && git add CHANGELOG.md",
     "postversion": "yarn run publish:git && yarn run publish:npm",
@@ -96,5 +98,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  }
 }
