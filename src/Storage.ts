@@ -20,7 +20,11 @@ export default class Storage<T> {
   }
 
   async write(data: PersistedData<T>): Promise<void> {
-    await this.storage.setItem(this.key, data);
+    try {
+      await this.storage.setItem(this.key, data);
+    } catch (error) {
+      console.log('Error writing data to storage:', error);
+    }
   }
 
   async purge(): Promise<void> {
